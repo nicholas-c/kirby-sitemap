@@ -10,7 +10,7 @@
 				<priority><? echo ($p->isHomePage()) ? 1 : number_format(0.5/$p->depth(), 1) ?></priority>
 			</url>
 			<? if($p->children->_): ?>
-				<? foreach ($p->children->index() as $child): ?>
+				<? foreach ($p->children->visible->index() as $child): ?>
 					<url>
 						<loc><? echo html($child->url()) ?></loc>
 						<lastmod><? echo $child->modified('c') ?></lastmod>
