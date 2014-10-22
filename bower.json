@@ -1,0 +1,38 @@
+{
+    "name": "Kirby Sitemap",
+    "authors": [
+    	"Nicholas Carter"
+    ],
+
+    "description": "A Kirby Dynamic Sitemap",
+    "main": "/site/template/sitemap.php",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/nicholas-c/kirby-sitemap.git"
+    },
+
+    "keywords": [
+        "Blog",
+        "api",
+        "Kirby",
+        "Propeller",
+        "propcomm",
+        "propeller",
+        "propcom",
+        "sitemap",
+        "Dynamic"
+    ],
+
+    "license": "Public",
+    "homepage": "https://github.com/nicholas-c/kirby-sitemap.git",
+
+    "ignore" : [
+	   "README.md"
+    ],
+
+    "install" : {
+        "content/sitemap/sitemap.txt" : "httpdocs/content/sitemap/",
+        "site/templates/sitemap.php" : "httpdocs/site/templates/"
+    }
+
+}
