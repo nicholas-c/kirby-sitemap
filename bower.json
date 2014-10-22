@@ -32,7 +32,8 @@
 
     "install" : {
         "content/sitemap/sitemap.txt" : "httpdocs/content/sitemap/",
-        "site/templates/sitemap.php" : "httpdocs/site/templates/"
+        "site/templates/sitemap.php" : "httpdocs/site/templates/",
+        "site/cms/blueprints/sitemap.php" : "httpdocs/site/cms/blueprints"
     }
 
 }
