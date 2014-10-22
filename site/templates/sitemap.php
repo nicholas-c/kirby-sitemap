@@ -10,12 +10,14 @@
 				<priority><? echo ($p->isHomePage()) ? 1 : number_format(0.5/$p->depth(), 1) ?></priority>
 			</url>
 			<? if($p->children->_): ?>
-				<? foreach ($p->children->visible->index() as $child): ?>
-					<url>
-						<loc><? echo html($child->url()) ?></loc>
-						<lastmod><? echo $child->modified('c') ?></lastmod>
-						<priority><? echo ($child->isHomePage()) ? 1 : number_format(0.25/$p->depth(), 2) ?></priority>
-					</url>
+				<? foreach ($p->children->index() as $child): ?>
+					<? if($child->visible()): ?>
+						<url>
+							<loc><? echo html($child->url()) ?></loc>
+							<lastmod><? echo $child->modified('c') ?></lastmod>
+							<priority><? echo ($child->isHomePage()) ? 1 : number_format(0.25/$p->depth(), 2) ?></priority>
+						</url>
+					<? endif ?>
 				<? endforeach ?>
 			<? endif ?>
 		<? endif ?>
